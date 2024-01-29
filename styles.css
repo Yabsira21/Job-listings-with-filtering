@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
+  background: hsl(180, 52%, 96%);
+  background-size: 50%;
+}
+
+main {
+  max-width: 69.25rem;
+  margin: 0 auto;
+  margin-top: 14.5rem;
+  margin-top: 7.5rem;
+}
+
+.bg-color {
+  position: absolute;
+  height: 9.75rem;
+  width: 100%;
+  z-index: -1;
+  background: url(images/bg-header-desktop.svg) no-repeat, hsl(180, 29%, 50%);
+  top: 0;
+}
+
+.filter {
+  background-color: white;
+  box-shadow: 0rem 1rem 1rem hsla(180, 29%, 50%, 0.2);
+  height: 4.5rem;
+  /* width: 69.25rem; */
+  padding: 1rem 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.35rem;
+  /* position: absolute;
+  top: 2rem; */
+}
+
+.filter-item {
+  display: flex;
+  background-color: hsla(180, 29%, 50%, 0.126);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.filter-item p {
+  font-size: 1rem;
+  padding: 0.6rem 0.75rem 0.4rem 0.55rem;
+}
+
+.remove {
+  background-color: hsl(180, 29%, 50%);
+  padding: 0.5rem 0.55rem 0.5rem 0.55rem;
+}
+
+.remove:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.clear {
+  display: inline-block;
+  margin-left: auto;
+
+  color: hsl(180, 29%, 50%);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 2rem 2.15rem;
+  border-radius: 0.45rem;
+  box-shadow: 0rem 1rem 1rem hsla(180, 29%, 50%, 0.2);
+  margin-bottom: 1.45rem;
+}
+
+.featured {
+  border-left: 0.35rem solid hsl(180, 29%, 50%);
+}
+
+.card--description {
+  margin-left: 1.5rem;
+}
+
+.card--company {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: hsl(180, 29%, 50%);
+}
+
+.card--company--name {
+  margin-right: 1rem;
+}
+
+.card--state {
+  margin-right: 0.5rem;
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+  padding: 0.45rem 0.5rem 0.15rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+}
+
+.card--isFeatured {
+  color: white;
+  background-color: black;
+  padding: 0.45rem 0.5rem 0.15rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+}
+
+.role {
+  font-size: 1.375rem;
+  margin-bottom: 0.85rem;
+}
+
+.card--detail {
+  display: flex;
+}
+
+.card--posted,
+.card--contract,
+.card--loc {
+  font-size: 1.075rem;
+  margin-right: 2.65rem;
+  position: relative;
+  color: hsl(180, 8%, 52%);
+}
+
+.card--posted::after,
+.card--contract::after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  top: 50%;
+  left: 145%;
+  transform: translate(-150%, -70%);
+  background-color: hsl(180, 8%, 52%);
+  position: absolute;
+}
+
+.card--lang {
+  margin-left: auto;
+}
+
+.card--item {
+  display: inline-block;
+  background-color: hsla(180, 29%, 50%, 0.126);
+  color: hsl(180, 29%, 50%);
+  padding: 0.5rem;
+  margin: 0 0.425rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card--item:hover {
+  cursor: pointer;
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  main {
+    max-width: 85%;
+  }
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.85rem 1.15rem;
+    margin-bottom: 5rem;
+  }
+  .card--lang {
+    margin: 0;
+    justify-content: space-between;
+  }
+  .card--description,
+  .card--lang {
+    transform: translateY(-20%);
+  }
+  .card--detail {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid gray;
+  }
+  .card img {
+    width: 4rem;
+    transform: translate(-5%, -75%);
+  }
+  .card--posted,
+  .card--contract,
+  .card--loc {
+    font-size: 0.85rem;
+  }
+  .filter {
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+  .filter-item {
+    margin-bottom: 1rem;
+  }
+  .card--state,
+  .card--isFeatured {
+    font-size: 0.75rem;
+  }
+}
